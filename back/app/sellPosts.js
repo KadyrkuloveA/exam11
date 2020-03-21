@@ -87,7 +87,7 @@ router.delete('/:id', auth, async (req, res) => {
                 return res.status(400).send({error: "Could't delete your task"});
             }
         } else{
-            return res.status(400).send({error: "Unauthorized user"});
+            return res.status(403).send({error: "Unauthorized user"});
         }
 
     } catch(e){
